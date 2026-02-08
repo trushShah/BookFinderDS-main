@@ -1,3 +1,5 @@
 [build]
   command = "python -m pip install --no-cache-dir -r requirements.txt && streamlit run app.py"
   publish = "public"
+[build.environment]
+PIP_NO_BUILD_ISOLATION = "true"
