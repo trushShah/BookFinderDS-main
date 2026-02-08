@@ -1,5 +1,16 @@
 [build]
-  command = "python -m pip install --no-cache-dir -r requirements.txt && streamlit run app.py"
-  publish = "public"
+  # Build command
+  command = "pip install --no-cache-dir --no-deps -r backend/requirements.txt && streamlit run backend/app.py"
+  # Publish directory (for Streamlit, can be empty if not building static files)
+  publish = "backend"
+
 [build.environment]
-PIP_NO_BUILD_ISOLATION = "true"
+  # Force pip to ignore optional dependencies (saves storage)
+  PIP_NO_BUILD_ISOLATION = "true"
+  PIP_IGNORE_INSTALLED = "true"
+  PIP_NO_DEPS = "true"
+  PIP_NO_CACHE_DIR = "true"
+
+[dev]
+  # Optional: for local netlify dev
+  command = "streamlit run backend/app.py"
