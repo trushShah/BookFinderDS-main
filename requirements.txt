@@ -1,8 +1,9 @@
-streamlit=1.54.0
+streamlit==1.54.0
 requests
 
 faiss-cpu
 sentence-transformers
 torch==2.10.0+cpu --extra-index-url https://download.pytorch.org/whl/cpu
 numpy
+
 
