@@ -1,0 +1,30 @@
+# Virtual environments (BIG)
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints/
+
+# Data files (keep only what you truly need)
+*.csv
+*.tsv
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.zip
+
+# Git
+.git/
+.gitignore
+
+# OS junk
+.DS_Store
+Thumbs.db
